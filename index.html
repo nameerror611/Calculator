@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini demo — GitHub Pages</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card" role="main" aria-label="Demo z textarea i przyciskiem">
+    <header class="header">
+      <div class="badge" aria-hidden="true">✨</div>
+      <div>
+        <h1>Prosty formularz</h1>
+        <p>Wpisz coś i kliknij przycisk — pojawi się komunikat: <strong>„Napisałeś…”</strong>.</p>
+      </div>
+    </header>
+
+    <label class="label" for="tekst">Twoja wiadomość</label>
+    <textarea id="tekst" class="textarea" rows="5" placeholder="Np. Cześć GitHub Pages!"></textarea>
+
+    <div class="row">
+      <button id="btn" class="button" type="button">Pokaż komunikat</button>
+      <span id="hint" class="hint" aria-live="polite"></span>
+    </div>
+
+    <footer class="footer">
+      <span>Tip: Enter + Ctrl (lub ⌘) też działa.</span>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
