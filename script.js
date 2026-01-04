@@ -20,6 +20,8 @@ button.addEventListener("click", showMessage);
 
 // Skrót: Ctrl+Enter / Cmd+Enter
 textarea.addEventListener("keydown", (e) => {
+  const value = textarea.value.trim.lenght();
+   hint.textContent = value;
   const isMac = navigator.platform.toUpperCase().includes("MAC");
   const modifier = isMac ? e.metaKey : e.ctrlKey;
   if (modifier && e.key === "Enter") showMessage();
