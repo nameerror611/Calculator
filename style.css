@@ -1,6 +1,6 @@
 /* Prosty, "ładny" wygląd bez frameworków */
 :root{
-  --bg: #00fb99;
+  --bg: #ffffff;
   --card: rgba(255,255,255,0.08);
   --border: rgba(255,255,255,0.14);
   --text: rgba(3,3,3,0.92);
