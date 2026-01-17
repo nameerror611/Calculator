@@ -6,22 +6,22 @@ function getValue(input)
 {
 	if(input.indexOf("+") !== -1)
 	{
-		let index = input.indexOf("+");
+		let index = input.lastIndexOf("+");
 		return getValue(input.slice(0,index)) + getValue(input.slice(index+1,input.length));
 	}
 	if(input.indexOf("-") !== -1)
 	{
-		let index = input.indexOf("-");
+		let index = input.lastIndexOf("-");
 		return getValue(input.slice(0,index)) - getValue(input.slice(index+1,input.length));
 	}
 	if(input.indexOf("*") !== -1)
 	{
-		let index = input.indexOf("*");
+		let index = input.lastIndexOf("*");
 		return getValue(input.slice(0,index)) * getValue(input.slice(index+1,input.length));
 	}
 	if(input.indexOf("/") !== -1)
 	{
-		let index = input.indexOf("/");
+		let index = input.lastIndexOf("/");
 		return getValue(input.slice(0,index)) / getValue(input.slice(index+1,input.length));
 	}
 
@@ -35,7 +35,7 @@ function calculate() {
 		hint.textContent = "Błąd";
 		return;
 	}
-	hint.textContent = getValue(textarea.value);
+	hint.textContent = result;
 }
 
 // Kliknięcie przycisku
