@@ -4,6 +4,12 @@ const hint = document.getElementById("hint");
 
 function getValue(input)
 {
+	if(input.indexOf("(") !== -1)
+	{
+		let index = input.lastIndexOf("(");
+	    let indexEnd = input.indexOf(")",index);
+		return getValue(input.slice(0,index) + getValue(input.slice(index+1,indexEnd)) + input.slice(indexEnd+1,input.length));
+	}
 	if(input.indexOf("+") !== -1)
 	{
 		let index = input.lastIndexOf("+");
