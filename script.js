@@ -4,6 +4,7 @@ const hint = document.getElementById("hint");
 
 function getValue(input)
 {
+	input = input.replace("*-","*m").replace("/-","/m");
 	if(input.indexOf("(") !== -1)
 	{
 		let index = input.lastIndexOf("(");
@@ -31,11 +32,11 @@ function getValue(input)
 		return getValue(input.slice(0,index)) / getValue(input.slice(index+1,input.length));
 	}
 
-	return Number(input);
+	return Number(input.replace("m","-"));
 }
 
 function calculate() {
-	let result = getValue(textarea.value);
+	let result = getValue(textarea.value.replace(" ","").replace("m","").replace(/(\d)\(/g, "$1*("));
 	if(isNaN(result))
 	{
 		hint.textContent = "Błąd";
