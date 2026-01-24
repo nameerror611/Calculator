@@ -130,3 +130,36 @@ p{
   color: rgba(255,255,255,0.6);
   font-size: 13px;
 }
+
+/* Mobile improvements */
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .textarea {
+    font-size: 18px;
+    min-height: 160px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+
+  .hint {
+    font-size: 16px;
+  }
+}
