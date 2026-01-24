@@ -2,6 +2,15 @@ const textarea = document.getElementById("tekst");
 const button = document.getElementById("btn");
 const hint = document.getElementById("hint");
 
+// Prefill textarea from URL, e.g. ?entry=6(4+6)
+const params = new URLSearchParams(window.location.search);
+const entry = params.get("entry");
+
+if (entry) {
+  textarea.value = entry;
+  hint.textContent = "Wczytano z URL ✅";
+}
+
 function getValue(input)
 {
 	input = input.replace("*-","*m").replace("/-","/m");
