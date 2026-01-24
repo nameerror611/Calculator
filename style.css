@@ -132,7 +132,7 @@ p{
 }
 
 /* Mobile improvements */
-@media (max-width: 1024px) {
+@media (max-width: 1900px) {
   body {
     font-size: 18px;
   }
